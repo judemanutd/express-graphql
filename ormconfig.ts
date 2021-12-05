@@ -1,0 +1,20 @@
+export default {
+  type: "postgres",
+  host: process.env.DB_HOST,
+  username: process.env.DB_USER,
+  password: process.env.DB_PASSWORD,
+  database: process.env.DB_NAME,
+  port: process.env.DB_PORT,
+  logging: true,
+  maxQueryExecutionTime: 10_000,
+  connectTimeoutMS: 10_000,
+  synchronize: false,
+  entities: [`${__dirname}/src/database/models/**/*{.ts,.js}`],
+  migrations: [`${__dirname}/src/database/migrations/**/*{.ts,.js}`],
+  seeds: [`${__dirname}/src/database/seeds/**/*{.ts,.js}`],
+  factories: [`${__dirname}/src/database/seedFactories/**/*{.ts,.js}`],
+  cli: {
+    entitiesDir: "src/database/models",
+    migrationsDir: "src/database/migrations",
+  },
+};

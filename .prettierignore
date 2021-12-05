@@ -1,0 +1,8 @@
+public/css
+public/js
+public/images
+public/plugins
+node_modules
+dist
+.vscode
+logs

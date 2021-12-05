@@ -1,0 +1,69 @@
+{
+  "extends": ["tslint:latest", "tslint-config-prettier"],
+  "rulesDirectory": ["tslint-plugin-prettier"],
+  "rules": {
+    "ordered-imports": false,
+    "prettier": true,
+    "object-literal-sort-keys": false,
+    "no-console": {
+      "severity": "warning",
+      "options": ["debug", "info", "log", "time", "timeEnd", "trace"]
+    },
+    "comment-format": true,
+    "member-access": false,
+    "class-name": false,
+    "variable-name": {
+      "options": [
+        "ban-keywords",
+        "check-format",
+        "allow-leading-underscore",
+        "require-const-for-all-caps",
+        "allow-pascal-case"
+      ]
+    },
+    "trailing-comma": true,
+    "no-var-requires": true,
+    "no-var-keyword": true,
+    "no-duplicate-variable": [true, "check-parameters"],
+    "import-spacing": true,
+    "only-arrow-functions": false,
+    "curly": false,
+    "no-duplicate-imports": true,
+    "triple-equals": { "severity": "warning" },
+    "no-return-await": { "severity": "error" },
+    "no-submodule-imports": false,
+    "adjacent-overload-signatures": true,
+    "ban-comma-operator": true,
+    "no-namespace": true,
+    "no-parameter-reassignment": true,
+    "no-reference": true,
+    "no-unnecessary-type-assertion": true,
+    "label-position": true,
+    "no-conditional-assignment": true,
+    "no-construct": true,
+    "no-duplicate-super": true,
+    "no-shadowed-variable": { "severity": "warning" },
+    "no-empty": [true, "allow-empty-catch"],
+    "no-floating-promises": true,
+    "no-implicit-dependencies": [true, ["typeorm-seeding", "faker"]],
+    "no-string-throw": true,
+    "no-unsafe-finally": true,
+    "no-void-expression": [true, "ignore-arrow-function-shorthand"],
+    "deprecation": true,
+    "no-empty-interface": { "severity": "warning" },
+    "no-import-side-effect": {
+      "severity": "warning",
+      "options": {
+        "ignore-module": "reflect-metadata"
+      }
+    },
+    "prefer-for-of": { "severity": "warning" },
+    "unified-signatures": { "severity": "warning" },
+    "prefer-const": { "severity": "warning" }
+  },
+  "defaultSeverity": "error",
+  "jsRules": {
+    "semicolon": true,
+    "triple-equals": true
+  }
+}
